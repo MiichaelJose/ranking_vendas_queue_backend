@@ -1,111 +1,122 @@
 {
-  "post": {
-    "url": "https://checkout.hoopay.com.br/dc9c1995-4fcb-4dff-98a1-c661d1133be5?product[]=f8fb3587-561e-4d72-a48f-4f66b8a30e14&src=other42",
-    "src": "other42",
-    "organizationUUID": "dc9c1995-4fcb-4dff-98a1-c661d1133be5",
-    "customer": {
-      "name": "Madeline Lebsack",
-      "email": "Milford22@example.org",
-      "phoneNumber": "5518923308489",
-      "phoneNumberOnlyNumbers": "18923308489",
-      "maskedPhoneNumber": "+55 (18) 9 2330 8489",
-      "document": "57884160358",
-      "documentType": "CPF"
-    },
-    "address": {
-      "zipcode": "12384135",
-      "street": "Rua Johnpaul Mission",
-      "streetNumber": "88541 Ward Prairie",
-      "neighborhood": "Gardena",
-      "complement": "Mina Orchard",
-      "city": "Nova Natáliado Sul",
-      "state": "BA"
-    },
-    "products": [
-      { "variantUUID": "7419fec2-7e7e-472e-8d3b-ee4c868e7617", "quantity": 2 },
-      { "variantUUID": "f8fb3587-561e-4d72-a48f-4f66b8a30e14", "quantity": 4 }
-    ],
-    "payment": {
-      "type": "billet",
-      "transactions": [
-        {
-          "type": "BILLET",
-          "amount": 630,
-          "acquirer": "pagarme",
-          "amountInterestGateway": 3
-        }
-      ]
-    },
-    "ip": "192.168.0.1",
-    "affiliateId": null,
-    "createdAt": "2022-05-22T23:03:27.581Z",
-    "coupon": null
-  },
-  "commissions": [
-    { "userId": 1, "type": "platform", "value": 44.47 },
-    { "userId": 2, "type": "partner", "value": 175.659 },
-    { "userId": 1, "type": "organization", "value": 409.871 }
-  ],
-  "productList": [
-    {
-      "id": 2,
-      "variantUUID": "f8fb3587-561e-4d72-a48f-4f66b8a30e14",
-      "price": 90,
-      "productId": 1,
-      "quantity": 4,
-      "amount": 360
-    },
-    {
-      "id": 3,
-      "variantUUID": "7419fec2-7e7e-472e-8d3b-ee4c868e7617",
-      "price": 135,
-      "productId": 1,
-      "quantity": 2,
-      "amount": 270
-    }
-  ],
-  "organization": {
-    "id": 1,
-    "ownerId": 1,
-    "payoutTax": 6.9,
-    "installmentsInterestFree": 0,
-    "invoiceDescription": "TEC_LUMENS",
-    "antiFraud": "active",
-    "evaluate": true,
-    "shipping": { "type": null, "price": null },
-    "owner": { "id": 1, "payoutTax": 6.9, "interestCommission": 0 },
-    "partners": [
-      { "partnerId": 2, "type": "percentage", "value": 30, "status": "accept" }
-    ]
-  },
-  "totalAmount": 630,
-  "paymentResponse": {
-    "hasErrors": false,
-    "status": 5,
-    "transactions": [
-      {
-        "type": "BILLET",
-        "amount": 630,
-        "acquirer": "pagarme",
-        "amountInterestGateway": 3,
-        "gatewayResponse": {
-          "hasErrors": false,
-          "transactionStatus": 5,
-          "acquirerId": "ch_OG63XmMfA7t1aPV0",
-          "acquirerId2": "tran_50a7EANcb4h47DOe",
-          "boletoUrl": "https://api.pagar.me/1/boletos/live_cl3hwog4nohqq14m5xlmx63bn",
-          "boletoBarcode": "23791.22928 60010.496580 64000.046900 3 89960000063000",
-          "paymentExpiration": "2022-05-25T20:03:27.580-03:00"
+    "post": {
+        "url": "https://checkout.hoopay.com.br/dc9c1995-4fcb-4dff-98a1-c661d1133be5?product[]=f8fb3587-561e-4d72-a48f-4f66b8a30e14&src=other42",
+        "src": "other42",
+        "organizationUUID": "dc9c1995-4fcb-4dff-98a1-c661d1133be5",
+        "customer": {
+            "name": "Madeline Lebsack",
+            "email": "Milford22@example.org",
+            "phoneNumber": "5518923308489",
+            "phoneNumberOnlyNumbers": "18923308489",
+            "maskedPhoneNumber": "+55 (18) 9 2330 8489",
+            "document": "57884160358",
+            "documentType": "CPF"
         },
-        "paidAmount": 630
-      }
+        "address": {
+            "zipcode": "12384135",
+            "street": "Rua Johnpaul Mission",
+            "streetNumber": "88541 Ward Prairie",
+            "neighborhood": "Gardena",
+            "complement": "Mina Orchard",
+            "city": "Nova Natáliado Sul",
+            "state": "BA"
+        },
+        "products": [
+            {
+                "variantUUID": "7419fec2-7e7e-472e-8d3b-ee4c868e7617",
+                "quantity": 2
+            },
+            {
+                "variantUUID": "f8fb3587-561e-4d72-a48f-4f66b8a30e14",
+                "quantity": 4
+            }
+        ],
+        "payment": {
+            "type": "billet",
+            "transactions": [
+                {
+                    "type": "BILLET",
+                    "amount": 630,
+                    "acquirer": "pagarme",
+                    "amountInterestGateway": 3
+                }
+            ]
+        },
+        "ip": "192.168.0.1",
+        "affiliateId": null,
+        "createdAt": "2022-05-22T23:03:27.581Z",
+        "coupon": null
+    },
+    "commissions": [
+        { "userId": 1, "type": "platform", "value": 44.47 },
+        { "userId": 2, "type": "partner", "value": 175.659 },
+        { "userId": 1, "type": "organization", "value": 409.871 }
     ],
-    "gatewayError": false
-  },
-  "acquirer": "pagarme",
-  "softDescriptor": {
-    "withPrefix": "B4PAY*TEC_LUMENS",
-    "withOutPrefix": "TEC_LUMENS"
-  },
-  "orderUUID": "a5a677e5-73fd-431d-9949-1900b4a12e60"
+    "productList": [
+        {
+            "id": 2,
+            "variantUUID": "f8fb3587-561e-4d72-a48f-4f66b8a30e14",
+            "price": 90,
+            "productId": 1,
+            "quantity": 4,
+            "amount": 360
+        },
+        {
+            "id": 3,
+            "variantUUID": "7419fec2-7e7e-472e-8d3b-ee4c868e7617",
+            "price": 135,
+            "productId": 1,
+            "quantity": 2,
+            "amount": 270
+        }
+    ],
+    "organization": {
+        "id": 1,
+        "ownerId": 1,
+        "payoutTax": 6.9,
+        "installmentsInterestFree": 0,
+        "invoiceDescription": "TEC_LUMENS",
+        "antiFraud": "active",
+        "evaluate": true,
+        "shipping": { "type": null, "price": null },
+        "owner": { "id": 1, "payoutTax": 6.9, "interestCommission": 0 },
+        "partners": [
+            {
+                "partnerId": 2,
+                "type": "percentage",
+                "value": 30,
+                "status": "accept"
+            }
+        ]
+    },
+    "totalAmount": 630,
+    "paymentResponse": {
+        "hasErrors": false,
+        "status": 5,
+        "transactions": [
+            {
+                "type": "BILLET",
+                "amount": 630,
+                "acquirer": "pagarme",
+                "amountInterestGateway": 3,
+                "gatewayResponse": {
+                    "hasErrors": false,
+                    "transactionStatus": 5,
+                    "acquirerId": "ch_OG63XmMfA7t1aPV0",
+                    "acquirerId2": "tran_50a7EANcb4h47DOe",
+                    "boletoUrl": "https://api.pagar.me/1/boletos/live_cl3hwog4nohqq14m5xlmx63bn",
+                    "boletoBarcode": "23791.22928 60010.496580 64000.046900 3 89960000063000",
+                    "paymentExpiration": "2022-05-25T20:03:27.580-03:00"
+                },
+                "paidAmount": 630
+            }
+        ],
+        "gatewayError": false
+    },
+    "acquirer": "pagarme",
+    "softDescriptor": {
+        "withPrefix": "B4PAY*TEC_LUMENS",
+        "withOutPrefix": "TEC_LUMENS"
+    },
+    "orderUUID": "a5a677e5-73fd-431d-9949-1900b4a12e60"
 }

@@ -1,5 +1,5 @@
-import schema, { StatusName } from "./schema";
+import schema, { StatusName } from './schema'
 
 export default (string: StatusName): number => {
-  return schema[string];
-};
+    return schema[string]
+}

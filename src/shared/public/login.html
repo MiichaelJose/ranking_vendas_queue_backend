@@ -1,127 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8" />
-<title>Rarus Bull</title>
-<style id="webmakerstyle">
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    <head>
+        <meta charset="UTF-8" />
+        <title>Rarus Bull</title>
+        <style id="webmakerstyle">
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+            }
 
-html, body {
-  width: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  background: -webkit-radial-gradient(rgb(75 75 75), rgb(51 51 51)) !important;  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+            html,
+            body {
+                width: 100%;
+                height: 100vh;
+                min-height: 100vh;
+                background: -webkit-radial-gradient(
+                    rgb(75 75 75),
+                    rgb(51 51 51)
+                ) !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-.form {
-  width: 480px;
-  height: auto;
-  background: white;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
+            .form {
+                width: 480px;
+                height: auto;
+                background: white;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
 
-.form h1 {
-  font-weight: bold;
-  font-size: 22px;
-}
+            .form h1 {
+                font-weight: bold;
+                font-size: 22px;
+            }
 
-.form p {
-  font-size: 16px;
-  color: darkgray;
-  margin-bottom: 20px;
-}
+            .form p {
+                font-size: 16px;
+                color: darkgray;
+                margin-bottom: 20px;
+            }
 
-label {
-  font-size: 14px;
-  color: darkgray;
-}
+            label {
+                font-size: 14px;
+                color: darkgray;
+            }
 
-input {
-  width: 100%;
-  height: 55px;
-  border-radius: 10px;
-  outline: none;
-  border: 1.5px solid darkgray;
-  text-align: center;
-  margin-bottom: 15px;
-  margin-top: 5px;
-}
+            input {
+                width: 100%;
+                height: 55px;
+                border-radius: 10px;
+                outline: none;
+                border: 1.5px solid darkgray;
+                text-align: center;
+                margin-bottom: 15px;
+                margin-top: 5px;
+            }
 
-input[type="submit"]{
-  width: 100%;
-  height: 55px;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  text-align: center;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  background: #7E62CB;
-  color: white;
-  cursor: pointer;
-}
+            input[type='submit'] {
+                width: 100%;
+                height: 55px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                text-align: center;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                background: #7e62cb;
+                color: white;
+                cursor: pointer;
+            }
 
-input[type="submit"]:hover{
-  opacity: 0.8;
-}
-</style>
+            input[type='submit']:hover {
+                opacity: 0.8;
+            }
+        </style>
 
-<script
-  src="https://code.jquery.com/jquery-3.7.0.js"
-  crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="form">
+            <form action="" method="POST">
+                <label for="username">Nome de usuário</label>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Nome de usuário"
+                />
+                <label for="username">Nome de usuário</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Senha"
+                />
+                <input type="submit" value="Entrar" />
+            </form>
+        </div>
 
-</head>
-<body>
-<div class="form">
-  <form action="" method="POST">
-    <label for="username">Nome de usuário</label>
-    <input type="text" name="username" id="username" placeholder="Nome de usuário">
-    <label for="username">Nome de usuário</label>
-    <input type="password" name="password" id="password" placeholder="Senha">
-    <input type="submit" value="Entrar">
-  </form>
-</div>
+        <script>
+            $(document).ready(function () {
+                $('form').submit(function (e) {
+                    e.preventDefault()
+                    const { username, password } = {
+                        username: $('#username').val(),
+                        password: $('#password').val(),
+                    }
 
-<script>
-  $(document).ready(function(){
-    $("form").submit(function(e) {
-      e.preventDefault();
-      const {username, password} = {
-        username: $("#username").val(),
-        password: $("#password").val(),
-      }
+                    $.ajax({
+                        method: 'POST',
+                        url: '/admin/login',
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify({
+                            username,
+                            password,
+                        }),
+                        dataType: 'json',
+                        success: data => {
+                            if (!data.status) {
+                                return alert(data.message)
+                            }
 
-
-      $.ajax({
-        method: "POST",
-        url: "/admin/login",
-        contentType: "application/json; charset=utf-8",
-        data:JSON.stringify( {
-          username,
-          password
-        }),
-        dataType: "json",
-        success: (data) => {
-          if(!data.status){
-            return alert(data.message)
-          }
-
-          return window.location.href = `/admin/${data.token}/monitor`;
-        }
-      })
-    });
-  })
-</script>
-</body>
+                            return (window.location.href = `/admin/${data.token}/monitor`)
+                        },
+                    })
+                })
+            })
+        </script>
+    </body>
 </html>

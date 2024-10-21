@@ -1,113 +1,101 @@
 {
     "env": {
-      "es2021": true,
-      "node": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
-      "airbnb-base",
-      "plugin:@typescript-eslint/recommended",
-      "prettier",
-      "plugin:prettier/recommended",
-      "eslint:recommended"
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended",
+        "eslint:recommended"
     ],
     "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-      "ecmaVersion": 2021,
-      "sourceType": "module",
-      "project": "./tsconfig.json"
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": [
-      "prettier",
-      "eslint-plugin-import-helpers",
-      "@typescript-eslint"
+        "prettier",
+        "eslint-plugin-import-helpers",
+        "@typescript-eslint"
     ],
     "rules": {
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      // Regras de estilo de código
-      "indent": "off",
-      "camelcase": "off",
-      "lines-between-class-members": "off",
-      "class-methods-use-this": "off",
-      "no-useless-constructor": "off",
-      "no-empty-function": "off",
-      // Regras de importação
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "ts": "never"
-        }
-      ],
-      "import/prefer-default-export": "off",
-      "import/no-unresolved": "error",
-      "import-helpers/order-imports": [
-        "warn",
-        {
-          "newlinesBetween": "always",
-          "groups": [
-            "module",
-            "/^@/",
-            [
-              "parent",
-              "sibling",
-              "index"
-            ]
-          ],
-          "alphabetize": {
-            "order": "asc",
-            "ignoreCase": true
-          }
-        }
-      ],
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": [
-            "**/*.spec.js"
-          ]
-        }
-      ],
-      // Regras específicas do TypeScript
-      "@typescript-eslint/naming-convention": [
-        "error",
-        {
-          "selector": "interface",
-          "format": [
-            "PascalCase"
-          ],
-          "custom": {
-            "regex": "^I[A-Z]",
-            "match": true
-          }
-        }
-      ],
-      "@typescript-eslint/no-explicit-any": "off",
-      // Regras gerais
-      "func-names": "off",
-      "no-underscore-dangle": "off",
-      "no-shadow": "off",
-      "no-console": "off",
-      // Regras do Prettier
-      "prettier/prettier": [
-        "error",
-        {
-          "tabWidth": 4,
-          "singleQuote": true,
-          "trailingComma": "es6",
-          "arrowParens": "always",
-          "printWidth": 100
-        }
-      ]
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        // Regras de estilo de código
+        "indent": "off",
+        "camelcase": "off",
+        "lines-between-class-members": "off",
+        "class-methods-use-this": "off",
+        "no-useless-constructor": "off",
+        "no-empty-function": "off",
+        // Regras de importação
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never"
+            }
+        ],
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "error",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": ["module", "/^@/", ["parent", "sibling", "index"]],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": ["**/*.spec.js"]
+            }
+        ],
+        // Regras específicas do TypeScript
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "interface",
+                "format": ["PascalCase"],
+                "custom": {
+                    "regex": "^I[A-Z]",
+                    "match": true
+                }
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        // Regras gerais
+        "func-names": "off",
+        "no-underscore-dangle": "off",
+        "no-shadow": "off",
+        "no-console": "off",
+        // Regras do Prettier
+        "prettier/prettier": [
+            "error",
+            {
+                "tabWidth": 4,
+                "singleQuote": true,
+                "trailingComma": "es6",
+                "arrowParens": "always",
+                "printWidth": 100
+            }
+        ]
     },
     "settings": {
-      "import/resolver": {
-        "typescript": {
-          "alwaysTryTypes": true
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
         }
-      }
     }
-  }
+}

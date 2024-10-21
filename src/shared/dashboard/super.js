@@ -1,6 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UI = void 0;
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
+exports.UI = void 0
 class UI {
     render() {
         return `
@@ -27,8 +27,8 @@ class UI {
       <noscript>You need to enable JavaScript to run this app.</noscript>
     </body>
     </html>
-    `;
+    `
     }
 }
-exports.UI = UI;
+exports.UI = UI
 //# sourceMappingURL=ui.js.map

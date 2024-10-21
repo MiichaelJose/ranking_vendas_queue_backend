@@ -1,17 +1,17 @@
-import Redis from 'ioredis';
+import Redis from 'ioredis'
 
-import { config } from '@shared/config';
+import { config } from '@shared/config'
 
 const RedisClient = new Redis(config.get('redis.cacheUri'), {
-  maxRetriesPerRequest: null
-});
+    maxRetriesPerRequest: null,
+})
 
 RedisClient.on('connect', () => {
-  console.log('Conectado a Redis', config.get('redis.cacheUri'));
-});
+    console.log('Conectado a Redis', config.get('redis.cacheUri'))
+})
 
 RedisClient.on('error', error => {
-  console.error('error', error);
-});
+    console.error('error', error)
+})
 
-export { RedisClient };
+export { RedisClient }

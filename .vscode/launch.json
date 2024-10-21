@@ -1,21 +1,19 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Node Attach",
-      "port": 9229,
-      "request": "attach",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "type": "pwa-node"
-    },
-    {
-      "type": "node-terminal",
-      "name": "Node Terminal",
-      "request": "launch",
-      "command": "yarn run dev",
-      "cwd": "${workspaceFolder}"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Node Attach",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Node Terminal",
+            "request": "launch",
+            "command": "yarn run dev",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
 }

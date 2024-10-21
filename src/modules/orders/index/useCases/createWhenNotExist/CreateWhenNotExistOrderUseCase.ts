@@ -1,13 +1,13 @@
-import { IOrderRepository } from '../../repositories/IOrderRepository';
-import { ICreateOrderDTO } from '../../dtos/ICreateOrderDTO';
-import { inject, injectable } from 'tsyringe';
+import { IOrderRepository } from '../../repositories/IOrderRepository'
+import { ICreateOrderDTO } from '../../dtos/ICreateOrderDTO'
+import { inject, injectable } from 'tsyringe'
 
 @injectable()
 class CreateWhenNotExistOrderUseCase {
     constructor(
         @inject('OrderRepository')
         private orderRepository: IOrderRepository
-    ) { }
+    ) {}
 
     async execute({
         uuid,
@@ -18,7 +18,7 @@ class CreateWhenNotExistOrderUseCase {
         statusId,
         amount,
         amountReference,
-        finishedAt
+        finishedAt,
     }: ICreateOrderDTO): Promise<number> {
         // const orderId = await this.orderRepository.getIdByUUID(uuid);
 
@@ -31,11 +31,11 @@ class CreateWhenNotExistOrderUseCase {
             statusId,
             amount,
             amountReference,
-            finishedAt
-        });
+            finishedAt,
+        })
 
-        return order.id;
+        return order.id
     }
 }
 
-export { CreateWhenNotExistOrderUseCase };
+export { CreateWhenNotExistOrderUseCase }

@@ -1,85 +1,97 @@
 interface Payment {
-    hasErrors: boolean;
-    status: string;
-    message: string;
-    charges: Charge[];
+    hasErrors: boolean
+    status: string
+    message: string
+    charges: Charge[]
 }
 
 interface Charge {
-    uuid: string;
-    amount: number;
-    installments: string;
-    card: Card;
-    type: string;
-    hasErrors: boolean;
-    status: string;
+    uuid: string
+    amount: number
+    installments: string
+    card: Card
+    type: string
+    hasErrors: boolean
+    status: string
 }
 
 interface Card {
-    cardToken: string;
+    cardToken: string
 }
 
 interface Customer {
-    email: string;
-    name: string;
-    phone: Phone;
-    document: Document;
-    address: Address;
+    email: string
+    name: string
+    phone: Phone
+    document: Document
+    address: Address
 }
 
 interface Phone {
-    phoneNumber: string;
-    masked: string;
-    numbersOnly: string;
+    phoneNumber: string
+    masked: string
+    numbersOnly: string
 }
 
 interface Document {
-    number: string;
-    type: string;
+    number: string
+    type: string
 }
 
 interface Address {
-    zipcode: string;
-    street: string;
-    streetNumber: string;
-    neighborhood: string;
-    complement: string;
-    city: string;
-    state: string;
+    zipcode: string
+    street: string
+    streetNumber: string
+    neighborhood: string
+    complement: string
+    city: string
+    state: string
 }
 
 interface Data {
-    src: string;
-    browser: string;
-    version: string;
-    platform: string;
-    source: string;
-    url: string;
-    urlRefer: string;
-    ip: string;
-    cookie: string;
+    src: string
+    browser: string
+    version: string
+    platform: string
+    source: string
+    url: string
+    urlRefer: string
+    ip: string
+    cookie: string
 }
 
 interface Commission {
-    userId: number;
-    type: string;
-    amount: number;
+    userId: number
+    type: string
+    amount: number
 }
 
 interface Product {
-    title: string;
-    price: number;
-    quantity: number;
+    title: string
+    price: number
+    quantity: number
 }
 
 interface PaymentData {
-    payment: Payment;
-    customer: Customer;
-    data: Data;
-    commissions: Commission[];
-    products: Product[];
-    paymentDate: string;
-    orderUUID: string;
+    payment: Payment
+    customer: Customer
+    data: Data
+    commissions: Commission[]
+    products: Product[]
+    paymentDate: string
+    orderUUID: string
 }
 
-export { Payment, Charge, Card, Customer, Phone, Document, Address, Data, Commission, Product, PaymentData };
+export {
+    Payment,
+    Charge,
+    Card,
+    Customer,
+    Phone,
+    Document,
+    Address,
+    Data,
+    Commission,
+    Product,
+    PaymentData,
+}
